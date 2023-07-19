@@ -1,0 +1,42 @@
+@startuml RECEIPT 
+left to right direction
+
+skinparam packageStyle rectangle
+actor User
+rectangle "Простое меню" {
+  
+  
+
+  
+  usecase "Ввод ингридиентов" as EnterIngredients
+  usecase "Выбор строгого поиска" as EnableStrictSearch
+  usecase "Вывод результатов" as ReceiveResults
+  usecase "Выбор карточки продукта" as SelectRecipeCard
+  usecase "Ознакомление с рецептом" as FamiliarizeWithRecipe
+  usecase "Реакция на рецепт" as ClickIcon
+  usecase "Переход к окну регистрации" as GoToRegistration
+  usecase "Заверщение регистрации" as CompleteRegistration
+  usecase "Посещение личной страницы" as EnterDashboard
+  usecase "Просмотр выбранных рецептов" as ViewSelectedRecipe
+
+}
+
+
+
+User --> EnterIngredients
+User --> EnableStrictSearch
+User --> ReceiveResults
+User --> SelectRecipeCard
+User --> FamiliarizeWithRecipe
+(FamiliarizeWithRecipe) --> (ClickIcon) : extends
+User --> GoToRegistration
+User --> CompleteRegistration
+User --> EnterDashboard
+User --> ViewSelectedRecipe
+
+@enduml
+
+
+
+
+

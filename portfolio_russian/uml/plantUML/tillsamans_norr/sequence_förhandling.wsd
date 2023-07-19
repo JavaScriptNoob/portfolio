@@ -1,0 +1,32 @@
+@startuml
+actor "Gruvbolaget X" as Gruvbolaget
+actor "Teknikleverantörer" as Teknikleverantörer
+actor "AI-experter" as AIexperter
+actor "Kommunikationskonsulter" as Kommunikationskonsulter
+actor "Hållbarhetskonsulter" as Hallbarhetskonsulter
+actor "Lokalbefolkningen" as Lokalbefolkningen
+
+Gruvbolaget -> Teknikleverantörer: Samarbeta för teknisk robusthet
+Teknikleverantörer --> Gruvbolaget: Tillhandahåller tekniska lösningar
+
+Gruvbolaget -> AIexperter: Samarbeta för optimerad kommunikation
+AIexperter --> Gruvbolaget: Ger rådgivning om AI-implementering
+
+Gruvbolaget -> Kommunikationskonsulter: Samarbeta för förbättrad strategi
+Kommunikationskonsulter --> Gruvbolaget: Utvecklar kommunikationsstrategi
+
+Gruvbolaget -> Hallbarhetskonsulter: Samarbeta för hållbarhetsfokus
+Hallbarhetskonsulter --> Gruvbolaget: Ger rådgivning om hållbarhetsaspekter
+
+Gruvbolaget -> Lokalbefolkningen: Tillhandahålla plattform för åsikter
+Lokalbefolkningen --> Gruvbolaget: Delar åsikter om beslut
+
+Gruvbolaget -> Gruvbolaget: Samlar in och utvärderar synpunkter
+Gruvbolaget -> Gruvbolaget: Analyserar och kategoriserar synpunkter
+Gruvbolaget -> Gruvbolaget: Prioriterar och vidarebefordrar synpunkter
+
+Gruvbolaget -> Gruvbolaget: Utför kostnadseffektiv feedbackinsamling
+Gruvbolaget -> Gruvbolaget: Analyserar insamlade data
+Gruvbolaget -> Gruvbolaget: Genererar rapporter och insikter
+
+@enduml

@@ -1,0 +1,49 @@
+@startuml USE CASE
+left to right direction
+skinparam linetype rectangle
+skinparam linetype ortho
+actor "Gruvbolaget X" as Gruvbolaget
+actor "Intressenter" as Intressenter
+actor "Teknikleverantörer" as Teknikleverantorer
+actor "AI-experter" as AIexperter
+actor "Kommunikationskonsulter" as Kommunikationskonsulter
+actor "Hållbarhetskonsulter" as Hallbarhetskonsulter
+actor "Lokalbefolkningen" as Lokalbefolkningen
+
+package "Digital kommunikationsplattform" as Plattform {
+    usecase "Inleda dialog" as Inleda
+    usecase "Upprätthålla dialog" as Uppratta
+    usecase "Dela synpunkter" as Dela
+    usecase "Få relevant information" as Fa
+    usecase "Samla in synpunkter" as Samla
+    usecase "Analysera synpunkter" as Analysera
+    usecase "Fatta beslut" as Fatta
+    usecase "Hantera oro och frågor" as Hantera
+    usecase "Samarbeta med teknikleverantörer" as SamarbetaTeknik
+    usecase "Samarbeta med AI-experter" as SamarbetaAI
+    usecase "Samarbeta med kommunikationskonsulter" as SamarbetaKommunikation
+    usecase "Samarbeta med hållbarhetskonsulter" as SamarbetaHallbarhet
+    usecase "Uppfylla FN:s urfolksdeklaration" as UppfyllaFN
+    usecase "Kostnadseffektiv feedbackinsamling" as Feedback
+    usecase "Använda olika kanaler" as OlikaKanaler
+}
+
+Gruvbolaget --> Inleda
+Gruvbolaget ---> Uppratta
+Intressenter --> Inleda
+Intressenter ---> Uppratta
+Intressenter ----> Dela
+Intressenter ----> Fa
+Plattform ---> Samla
+Plattform --> Analysera
+Plattform -right-> Fatta
+Plattform ---> Hantera
+Teknikleverantorer ---> SamarbetaTeknik
+AIexperter ---> SamarbetaAI
+Kommunikationskonsulter --left-> SamarbetaKommunikation
+Hallbarhetskonsulter --> SamarbetaHallbarhet
+Lokalbefolkningen -left-> UppfyllaFN
+Gruvbolaget --> Feedback
+Gruvbolaget -left-> OlikaKanaler
+
+@enduml

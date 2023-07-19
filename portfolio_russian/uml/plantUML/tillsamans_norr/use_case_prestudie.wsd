@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor "Gruvbolaget X" as Gruvbolaget
+actor "Intressenter" as Intressenter
+
+rectangle "Digital kommunikationsplattform" {
+  usecase "Inleda dialog" as Inleda
+  usecase "Upprätthålla dialog" as Upprätthålla
+  usecase "Dela synpunkter" as Dela
+  usecase "Få relevant information" as Få
+}
+
+Gruvbolaget --> Inleda
+Gruvbolaget --> Upprätthålla
+Intressenter --> Dela
+Intressenter --> Få
+
+@enduml

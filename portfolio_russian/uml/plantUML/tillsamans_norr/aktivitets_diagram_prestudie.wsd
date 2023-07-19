@@ -1,0 +1,25 @@
+@startuml
+class GruvbolagetX {
+  - namn: String
+  + initieraDialog()
+  + samlaInOchUtvärderaSynpunkter()
+  + geRelevantInformation()
+}
+
+class Intressenter {
+  - namn: String
+  + delaSynpunkter()
+  + fåRelevantInformation()
+}
+
+class Kommunikationsplattform {
+  - synpunkter: List<String>
+  - relevantInformation: List<String>
+  + samlaSynpunkter(synpunkter: List<String>)
+  + utvärderaSynpunkter()
+  + tillhandahållaInformation(): List<String>
+}
+
+GruvbolagetX -- Kommunikationsplattform : använder
+Intressenter -- Kommunikationsplattform : använder
+@enduml

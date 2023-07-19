@@ -1,0 +1,34 @@
+
+@startuml
+package "Gruvbolaget X" {
+  class "Digital kommunikationsplattform" as Kommunikationsplattform {
+    + initieraDialog()
+    + samlaSynpunkter()
+    + utvarderaSynpunkter()
+    + geInformation()
+    + faInformation()
+  }
+}
+
+package "Intressenter" {
+  class "Naringsliv" as Naringsliv
+  class "Kommun" as Kommun
+  class "Investor" as Investor
+  class "Miljoorganisation" as Miljoorganisation
+}
+
+Kommunikationsplattform -- Naringsliv
+Kommunikationsplattform -- Kommun
+Kommunikationsplattform -- Investor
+Kommunikationsplattform -- Miljoorganisation
+
+note left of Kommunikationsplattform: Använder\nDigital kommunikationsplattform
+
+note right of Naringsliv: Delar synpunkter\noch får information
+note right of Kommun: Delar synpunkter\noch får information
+note right of Investor: Delar synpunkter\noch får information
+note right of Miljoorganisation: Delar synpunkter\noch får information
+
+@enduml
+
+@@enduml
