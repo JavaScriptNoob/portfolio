@@ -1,0 +1,20 @@
+@startuml
+
+actor "Пользователь (Елена)" as Elena
+
+usecase "Открытие приложения" as OpenApp
+usecase "Зарегистрироваться" as SignUp
+usecase "Ввод данных" as InputData
+usecase "Проверка данных" as CheckData
+usecase "Создание учетной записи" as CreateAccount
+usecase "Уведомление о регистрации" as Notification
+
+Elena --> OpenApp
+Elena --> SignUp : (Зарегистрироваться)
+
+SignUp --> InputData : Ввод данных
+InputData --> CheckData : Проверка данных
+CheckData --> CreateAccount : Данные корректны
+CreateAccount --> Notification : Уведомление о регистрации
+
+@enduml

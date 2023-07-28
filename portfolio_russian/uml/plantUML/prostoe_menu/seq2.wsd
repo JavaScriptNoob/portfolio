@@ -1,0 +1,24 @@
+@startuml
+
+left to right direction
+
+actor "Пользователь (Елена)" as Elena
+
+usecase "Использование приложения" as UseApp
+usecase "Регистрация пользователя" as Registration
+usecase "Поиск рецептов на основе доступных продуктов" as SearchByIngredients
+usecase "Подбор питательных и вкусных блюд" as NutritiousAndTasty
+usecase "Экономия времени при планировании" as TimeSaving
+usecase "Добавление в избранное" as AddToFavorites
+usecase "Составление меню на основе избранных блюд" as CreateMenu
+
+Elena --> UseApp : (Использование приложения "Простое меню")
+Elena --> Registration : Регистрация пользователя
+
+UseApp --> SearchByIngredients : Поиск рецептов на основе доступных продуктов
+UseApp --> NutritiousAndTasty : Подбор питательных и вкусных блюд
+UseApp --> TimeSaving : Экономия времени при планировании
+UseApp --> AddToFavorites : Добавление в избранное
+UseApp --> CreateMenu : Составление меню на основе избранных блюд
+
+@enduml

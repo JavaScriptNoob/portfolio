@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+actor Elena as "Пользователь (Елена)"
+rectangle "Простое меню" {
+usecase "Поиск рецептов на основе доступных продуктов" as UC1
+usecase "Подбор питательных и вкусных блюд" as UC2
+usecase "Экономия времени при планировании" as UC3
+usecase "Регистрация пользователя" as UC4
+usecase "Добавление в избранное" as UC5
+usecase "Составление меню на основе избранных блюд" as UC6
+}
+Elena --> UC1
+Elena --> UC2
+Elena --> UC3
+Elena --> UC4
+Elena --> UC5
+Elena --> UC6
+
+@enduml
